@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QR Codes</title>
+    
+    <script src="qrcode.js"></script>
+</head>
+<body>
+    <header>
+        <h1> QRcode </h1>
+        <h2 id= 'qrcode'></h2>
+        
+    </header>
+   
+    <script>
+      let data  = {
+          name:"jemy", 
+          green:"10",
+          red:"5",
+          yellow:"1"
+        };
+      let sData = JSON.stringify(data);
+        let qrcode = new QRCode('qrcode', {
+            text:sData,
+            width: 100,
+            height: 100,
+            colorDark : "#000000",
+            colorLight : "#ffffff",
+            correctLevel : QRCode.CorrectLevel.H
+        });
+        
+        document.body.addEventListener('click', ()=>{
+            qrcode.clear(); 
+            qrcode.makeCode("http://google.ca/"); 
+        })
+        
+    </script>
+</body>
+</html>
