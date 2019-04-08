@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+ <head>
+   <meta charset="utf-8">
+   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" type="text/css" href="test.css">
+    <meta name="viewport" content="width=device-width, initial-scale">
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+   <title>test</title>
+ </head>
+ <body>
+
+   <div id="app">
+     <div class="grid-container">
+       <div style="background-color:rgb(26, 26, 26);">
+        <div class="one">Orders</div>
+       </div>
+       <div class="h1"> Order description</div>
+       <div class="factory">
+         <div class="h2">factory modules</div>
+       </div>
+       <div id="output" class="orders">
+         <div v-for="(order,index) in orders" :key="order.id">
+           <div class="list">
+                 <img  style="margin-left:20px; " v-bind:src="img5" >
+                <div  style="display:inline-block;font-size:20px; "> {{ order.name }} </div>
+                <div  style="font-size:20px;margin-left:90px; "> Order ID: {{ order.id }} </div>
+           </div>
+           <div>
+              <button @click="removeOrder(index)"type="button" class="btn" >Remove</button>
+              <button @click="showDetails(index)"type="button" class="btn" >Show Details</button>
+
+            <!--  <button @click="addOrder" type="button"> Add Order</button>-->
+           </div>
+
+           <div style="background-color:black; height:5px;"></div>
+         </div>
+       </div>
+       <div style="background-color:rgb(51, 51, 51);">
+         <div class="img1">
+          <img  v-bind:src="img1">
+          <p style="display:inline-block;">{{ name }}</p>
+
+         </div>
+         <br>
+         <img class="img2" v-bind:src="img2">
+       </div>
+
+       <div class="sorting">
+         <div class="h3">
+          <h2> sorting machine </h2>
+         </div>
+         <img style="margin-left:150px"v-bind:src="img3">
+         <p class="p1" v-if="sorting"> Loading... </p>
+         <p class="p1" v-else>sorting is finished </p>
+
+         <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-container w3-blue w3-round-xlarge" style="width:70%;height:20px" v-if="sorting"></div>
+            <div class="w3-container w3-blue w3-round-xlarge" style="width:100%;height:20px" v-else></div>
+          </div>
+       </div>
+       <div class="order">
+         <div style="font-size:25px;" >-ID:{{ id }} </div>
+          <div style="font-size:25px;" >-location1:{{ location1 }}</div>
+          <div style="font-size:25px;" >-location2:{{ location2 }}</div>
+          <p style="font-size:25px;" >Product information:</p>
+          <div style="font-size:25px;">-Red balls:{{ red }}</div>
+          <div style="font-size:25px;"  >-Green balls:{{ green }}</div>
+          <div style="font-size:25px;"  v-if="collecting" >-Status:In progress</div>
+          <div style="font-size:25px;"  v-elseif="Done" >-Status: Done </div>
+          <div style="font-size:25px;"  v-else >-Status:Waiting</div>
+
+           <button id="orderBtn" class="btn" v-on:click.prevent="newOrder"> Send Order </button>
+       </div>
+       <div class="sorting">
+         <div class="h3">
+          <h2> collecting order </h2>
+         </div>
+         <img style="margin-left:150px" v-bind:src="img4">
+         <p class="p1" v-if="sorting"> Loading... </p>
+         <p class="p1" v-else>order is finished </p>
+
+         <div class="w3-light-grey w3-round-xlarge">
+            <div class="w3-container w3-blue w3-round-xlarge" style="width:70%;height:20px" v-if="collecting"></div>
+            <div class="w3-container w3-blue w3-round-xlarge" style="width:100%;height:20px" v-else></div>
+         </div>
+       </div>
+
+     </div>
+   </div>
+   <script src="myVue.js"></script>
+ </body>
+</html>
