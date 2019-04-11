@@ -7,8 +7,8 @@ const firebaseApp = firebase.initializeApp(
 );
 
 
-    const ref = firebaseApp.database().ref('/new');
-    const data = ref.once('value').then(snap => snap.val());
+const ref = firebaseApp.database().ref('/new');
+const data = ref.once('value').then(snap => snap.val());
 
 
 
