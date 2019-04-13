@@ -102,7 +102,7 @@
                      <v-flex xs12>
                     <v-card-title><h1>collecting order</h1></v-card-title>
 
-                      <img src="./conveyor.png" style="padding:20px; margin-left:250px">
+                      <img src="./order.png" style="padding:20px; margin-left:250px">
                       <h2 style="margin-left:200px">loading...</h2>
                       <v-progress-linear
                         color="warning"
