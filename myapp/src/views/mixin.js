@@ -53,21 +53,22 @@ let db = firebase.database();
 
         Object.keys(orders).forEach((name) => {
 
-          app.orders.push({
-            id:app.idForOrder,
+          this.orders.push({
+            id:this.idForOrder,
             name: orders[name].name,
             location1: orders[name].location1,
             location2: orders[name].location2,
             red: orders[name].red,
             green: orders[name].green,
-            yellow: orders[name].yellow
+            yellow: orders[name].yellow,
+            orange: orders[name].orange
           });
-          app.idForOrder ++
+           this.idForOrder ++
 
       });
     });
      },
-     
+
     showDetails(index){
 
       this.name=this.orders[index].name;
