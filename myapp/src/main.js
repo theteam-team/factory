@@ -16,15 +16,7 @@ ws.onopen = function(){
   }));
 }
 
-var config = {
- apiKey: "AIzaSyB_GzFAi93M1oPeKhNdguwoyBgXCEznsaA",
- authDomain: "realtime-23d22.firebaseapp.com",
- databaseURL: "https://realtime-23d22.firebaseio.com",
- projectId: "realtime-23d22",
- storageBucket: "realtime-23d22.appspot.com",
- messagingSenderId: "100120188778"
-};
-firebase.initializeApp(config);
+ 
 
 Vue.config.productionTip = false
 

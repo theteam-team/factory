@@ -1,4 +1,21 @@
 
+import * as firebase from 'firebase'
+
+var config = {
+ apiKey: "AIzaSyB_GzFAi93M1oPeKhNdguwoyBgXCEznsaA",
+ authDomain: "realtime-23d22.firebaseapp.com",
+ databaseURL: "https://realtime-23d22.firebaseio.com",
+ projectId: "realtime-23d22",
+ storageBucket: "realtime-23d22.appspot.com",
+ messagingSenderId: "100120188778"
+};
+firebase.initializeApp(config);
+
+let db = firebase.database();
+   let key='new/';
+   let orders ;
+   let output ='';
+
 
  export default{
    data(){
@@ -29,6 +46,28 @@
      }
    },
    methods:{
+     create(){
+       db.ref(key).on('value', function(snap){
+
+        orders = snap.val();
+
+        Object.keys(orders).forEach((name) => {
+
+          app.orders.push({
+            id:app.idForOrder,
+            name: orders[name].name,
+            location1: orders[name].location1,
+            location2: orders[name].location2,
+            red: orders[name].red,
+            green: orders[name].green,
+            yellow: orders[name].yellow
+          });
+          app.idForOrder ++
+
+      });
+    });
+     },
+     
     showDetails(index){
 
       this.name=this.orders[index].name;
@@ -44,7 +83,7 @@
     removeOrder(index){
       this.orders.splice(index, 1)
     },
-    //send to firebase 
+    //send to firebase
     newOrder(){
 
     }
