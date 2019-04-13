@@ -39,11 +39,15 @@
       this.green=this.orders[index].green;
       this.orange=this.orders[index].orange;
       this.yellow=this.orders[index].yellow;
-       
+
     },
     removeOrder(index){
       this.orders.splice(index, 1)
     },
+    //send to firebase 
+    newOrder(){
+
+    }
 
   }
  }

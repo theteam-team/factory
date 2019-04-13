@@ -39,7 +39,10 @@
                  <div style="font-size:25px;" >-Green balls: {{ green }}</div>
                  <div style="font-size:25px;" >-Yellow balls: {{ yellow }}</div>
                  <div style="font-size:25px;" >-Orange balls: {{ orange }}</div>
-
+                 <br>
+                  <v-flex xs12 offset-xs7 >
+                 <v-btn   @click="newOrder">Send Order</v-btn>
+                 </v-flex>
               </v-flex>
              </v-flex>
            </v-layout>
