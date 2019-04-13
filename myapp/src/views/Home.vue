@@ -3,7 +3,7 @@
 
     <v-layout row warp>
       <v-flex  d-flex xs12 sm4 md6 >
-
+        <v-card>
          <v-container fluid>
            <v-layout row>
              <v-flex xs12>
@@ -46,8 +46,9 @@
               </v-flex>
              </v-flex>
            </v-layout>
-         </v-container>
 
+         </v-container>
+       </v-card>
       </v-flex>
 
 
@@ -84,8 +85,9 @@
                                </v-container>
                               </v-card>
                             </v-flex>
-                           <img src="./m3.png" style="padding:20px; margin-left:250px">
-                           <h2 style="margin-left:200px">loading...</h2>
+                           <img src="./robot-arm.png" style="padding:20px; margin-left:180px">
+                           <h2 style="margin-left:200px" v-if="sorting"> Loading... </h2>
+                           <h2 style="margin-left:200px" v-else="sorting">sorting is finished </h2>
                            <v-progress-linear
                              color="warning"
                              height="15"
@@ -105,7 +107,7 @@
                      <v-flex xs12>
                     <v-card-title><h1>collecting order</h1></v-card-title>
 
-                      <img src="./order.png" style="padding:20px; margin-left:250px">
+                      <img src="./production.png" style="padding:20px; margin-left:180px">
                       <h2 style="margin-left:200px">loading...</h2>
                       <v-progress-linear
                         color="warning"
