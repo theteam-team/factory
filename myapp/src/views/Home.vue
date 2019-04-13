@@ -80,7 +80,7 @@
                               <v-card  class="grey darken-1">
                                 <v-container>
                                   <v-layout  >
-                                      <h1>sorting machine</h1>
+                                      <h1>Sorting machine</h1>
                                  </v-layout>
                                </v-container>
                               </v-card>
@@ -105,10 +105,18 @@
                  <v-container>
                    <v-layout>
                      <v-flex xs12>
-                    <v-card-title><h1>collecting order</h1></v-card-title>
-
+                       <v-flex xs6  >
+                         <v-card  class="grey darken-1">
+                           <v-container>
+                             <v-layout  >
+                                 <h1>Collecting order</h1>
+                            </v-layout>
+                          </v-container>
+                         </v-card>
+                       </v-flex>
                       <img src="./production.png" style="padding:20px; margin-left:180px">
-                      <h2 style="margin-left:200px">loading...</h2>
+                      <h2 style="margin-left:200px" v-if="collecting">loading...</h2>
+                      <h2 style="margin-left:200px" v-else="collecting">order is finished </h2>
                       <v-progress-linear
                         color="warning"
                         height="15"
