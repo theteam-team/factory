@@ -14,25 +14,22 @@
 
                 </v-toolbar>
                 <v-list three-line>
-
-                    <v-list-tile v-for="(order,index) in orders" :key="order.id"  @click ="showDetails(index)" >
-
-                            <v-avatar >
+                  <template >
+                      <div v-for="(order, index) in orders">
+                          <v-list-tile >
+                            <v-list-tile-avatar>
                               <v-icon x-large dark>account_circle</v-icon>
-                            </v-avatar>
-                           
+                            </v-list-tile-avatar>
+                            <v-list-tile-content>
+                              <div class="item" style="margin-left:180px;"@click="removeOrder(index)"> &times</div>
+                              <div  style="display:inline-block;font-size:20px; "> {{ order.name }} </div>
 
-                           <div  style="display:inline-block;font-size:20px;margin-left:10px "> {{ order.name }} </div>
-                           <div class="item" @click="removeOrder(index)"> &times</div>
-                           <div  style="display:inline-block;font-size:20px;margin-left:60px; "> Order ID: {{ order.id }} </div>
-                           <br></br>
-
-
-                     </v-list-tile>
-                      <v-divider></v-divider>
-
-
-
+                              <div  style="font-size:20px;margin-left:0px; "> Order ID: {{ order.id }} </div>
+                            </v-list-tile-content>
+                          </v-list-tile>
+                            <v-divider></v-divider>
+                          </div>
+                        </template>
                 </v-list>
             </v-flex>
           </v-layout>
@@ -92,7 +89,7 @@ export default {
   .item{
     cursor:pointer;
      display:inline-block;
-
+     margin-left:50px;
      &:hover{
       color:black;
     }
