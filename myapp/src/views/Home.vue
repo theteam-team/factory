@@ -85,7 +85,7 @@
                                </v-container>
                               </v-card>
                             </v-flex>
-                           <img src="./robot-arm.png" style="padding:20px; margin-left:180px">
+                           <img src="./robot-arm.png" style="padding:20px; margin-left:150px">
                            <h2 style="margin-left:200px" v-if="sorting"> Loading... </h2>
                            <h2 style="margin-left:200px" v-else="sorting">sorting is finished </h2>
                            <v-progress-linear
@@ -114,7 +114,7 @@
                           </v-container>
                          </v-card>
                        </v-flex>
-                      <img src="./production.png" style="padding:20px; margin-left:180px">
+                      <img src="./production.png" style="padding:20px; margin-left:150px">
                       <h2 style="margin-left:200px" v-if="collecting">loading...</h2>
                       <h2 style="margin-left:200px" v-else="collecting">order is finished </h2>
                       <v-progress-linear

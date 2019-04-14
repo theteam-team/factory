@@ -15,7 +15,7 @@
                 </v-toolbar>
                 <v-list three-line>
                   <template >
-                      <div v-for="(order, index) in orders">
+                      <div class="item"v-for="(order, index) in orders">
                           <v-list-tile >
                             <v-list-tile-avatar>
                               <v-icon x-large dark>account_circle</v-icon>
@@ -89,7 +89,7 @@ export default {
   .item{
     cursor:pointer;
      display:inline-block;
-     margin-left:50px;
+     
      &:hover{
       color:black;
     }
