@@ -33,7 +33,6 @@ io.on('connection',function(socket){
     db.ref(key).on('value', function(snap){
         orders = snap.val();
         console.log( orders);
-
         //send data to clients
         io.sockets.emit('chat',orders);
         console.log(' socket ',orders);
