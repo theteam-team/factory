@@ -1,8 +1,8 @@
 #include <FirebaseArduino.h>
 #include <ESP8266WiFi.h>
 
-#define WIFI_SSID "TE-Data"
-#define WIFI_PASSWORD "36445678@"
+#define WIFI_SSID "your_network_name"
+#define WIFI_PASSWORD "your_network_password"
 
 
 #define FIREBASE_HOST "realtime-23d22.firebaseio.com"
