@@ -5,8 +5,8 @@
 #define WIFI_PASSWORD "your_network_password"
 
 
-#define FIREBASE_HOST "realtime-23d22.firebaseio.com"
-#define FIREBASE_AUTH "Zx2X81BrWtnscIvfaqY2E2VLgEtq9YfzievaOnln"
+#define FIREBASE_HOST "your_database_url"
+#define FIREBASE_AUTH "your_database_secret_key"
 
 
 
