@@ -10,12 +10,12 @@ var config = {
  messagingSenderId: "100120188778"
 };
 firebase.initializeApp(config);
-
+/*
 let db = firebase.database();
    let key='new/';
    let orders ;
    let output ='';
-
+*/
 
  export default{
    data(){
@@ -46,6 +46,7 @@ let db = firebase.database();
      }
    },
    methods:{
+     /*
      create(){
        db.ref(key).on('value', function(snap){
 
@@ -67,18 +68,15 @@ let db = firebase.database();
 
       });
     });
-     },
+  }*/
 
     showDetails(index){
 
+
       this.name=this.orders[index].name;
       this.id=this.orders[index].id;
-       this.location1=this.orders[index].location1;
-      this.location2=this.orders[index].location2;
-      this.red=this.orders[index].red;
-      this.green=this.orders[index].green;
-      this.orange=this.orders[index].orange;
-      this.yellow=this.orders[index].yellow;
+     
+      alert('show');
 
     },
     removeOrder(index){

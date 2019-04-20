@@ -73,7 +73,7 @@ import firebase from 'firebase';
              alert(err.message);
            }
          );
-         e.preventDefault();
+         
        }
 
 

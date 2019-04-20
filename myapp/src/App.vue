@@ -2,7 +2,7 @@
   <v-app dark>
    <v-navigation-drawer temporary v-model="sideNav"  clipped  fixed>
 
-          <v-layout v-scroll:#scroll-target="onScroll"  column  align-center    style="height: 1000px">
+          <v-layout v-scroll  column  align-center    style="height: 1000px">
             <v-flex xs12  >
               <v-toolbar color="orange" dark>
                  <v-icon x-large  > supervisor_account</v-icon>
@@ -15,12 +15,13 @@
                 </v-toolbar>
                 <v-list three-line>
                   <template >
-                      <div class="item"v-for="(order, index) in orders">
-                          <v-list-tile >
+                      <div  class="item"v-for="(order, index) in orders">
+                          <v-list-tile  @click="showDetails(index)" >
                             <v-list-tile-avatar>
                               <v-icon x-large dark>account_circle</v-icon>
                             </v-list-tile-avatar>
                             <v-list-tile-content>
+
                               <div class="item" style="margin-left:180px;"@click="removeOrder(index)"> &times</div>
                               <div  style="display:inline-block;font-size:20px; "> {{ order.name }} </div>
 
@@ -89,7 +90,7 @@ export default {
   .item{
     cursor:pointer;
      display:inline-block;
-     
+
      &:hover{
       color:black;
     }

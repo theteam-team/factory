@@ -63,6 +63,10 @@ import firebase from 'firebase';
     } ,
     methods:{
        Signup:function(e){
+          //this.$router.push('/')
+
+
+
          firebase.auth().createUserWithEmailAndPassword(this.email, this.password).then(
           function(user){
              alert('Account created for ${user.email}');
@@ -72,7 +76,7 @@ import firebase from 'firebase';
              alert(err.message);
            }
          );
-         e.preventDefault();
+         
        }
 
 
