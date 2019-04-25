@@ -1,15 +1,14 @@
 #include <FirebaseArduino.h>
 #include <ESP8266WiFi.h>
-#include <ArduinoJson.h>
 #include <Servo.h>
 
 
-#define WIFI_SSID "your_network_name"
-#define WIFI_PASSWORD "your_network_password"
+#define WIFI_SSID "Leusra8"
+#define WIFI_PASSWORD "1q2w3e&amhmn"
 
 
-#define FIREBASE_HOST "your_database_url"
-#define FIREBASE_AUTH "your_database_secret_key"
+#define FIREBASE_HOST "realtime-23d22.firebaseio.com"
+#define FIREBASE_AUTH "Zx2X81BrWtnscIvfaqY2E2VLgEtq9YfzievaOnln"
 
 
 Servo myservo_red;  // create servo object to control a servo
